@@ -1,5 +1,8 @@
 import React from "react";
 import { FaReact } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
+import { RiSpotifyLine } from "react-icons/ri";
+import { BsPlus } from "react-icons/bs";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -9,11 +12,23 @@ const Footer = () => {
       <FooterWrap>
         <SocialLogo to="/">HouseParty</SocialLogo>
         <WebsiteRights>
-          JJ © {new Date().getFullYear()} All rights reserved.{" "}
+          Jay Jhangiani © {new Date().getFullYear()} All rights reserved.{" "}
         </WebsiteRights>
         <SocialIcons>
           <SocialIconLink aria-label="MADE WITH REACT">
             <FaReact />
+          </SocialIconLink>
+          <SocialIconLinkAlt>
+            <BsPlus />
+          </SocialIconLinkAlt>
+          <SocialIconLink aria-label="MADE WITH FIREBASE">
+            <IoLogoFirebase />
+          </SocialIconLink>
+          <SocialIconLinkAlt>
+            <BsPlus />
+          </SocialIconLinkAlt>
+          <SocialIconLink aria-label="MADE WITH SPOTIFY API">
+            <RiSpotifyLine />
           </SocialIconLink>
         </SocialIcons>
       </FooterWrap>
@@ -63,6 +78,12 @@ const SocialIcons = styled.div`
 
 const SocialIconLink = styled.a`
   color: #fff;
+  font-size: 24px;
+  text-align: center;
+`;
+
+const SocialIconLinkAlt = styled.a`
+  color: #14bf71;
   font-size: 24px;
   text-align: center;
 `;
